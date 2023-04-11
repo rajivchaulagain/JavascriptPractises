@@ -267,7 +267,9 @@ const products = [
   },
 ];
 
-let cartItems = [];
+let cartItems = JSON.parse(localStorage.getItem('products')) || [];
+
+console.log({cartItems});
 
 const isItemInCart = (itemId) => {
   for (let i = 0; i < cartItems.length; i++) {
@@ -288,6 +290,17 @@ function addToCart(id) {
     (product) => product.id === Number(productId)
   );
   cartItems.push(productToAdd);
+  localStorage.setItem('products' , JSON.stringify(cartItems))
+  updateCartDisplay();
+}
+
+function removeFromCart(id) {
+  const productId = Number(id);
+  const filterdCart = cartItems.filter(
+    (product) => product.id !== Number(productId)
+  );
+  cartItems = filterdCart;
+  localStorage.setItem('products' , JSON.stringify(cartItems))
   updateCartDisplay();
 }
 
@@ -307,11 +320,7 @@ const showProducts = () => {
                               <p>$${product.price.toFixed(2)}</p>
                         </div>
                         <div class="card-footer">
-                        ${
-                          isItemInCart(product.id)
-                            ? ` <button class="btn btn-primary" onclick="addToCart('${product.id}')">Remove from cart</button>`
-                            : ` <button class="btn btn-primary" onclick="addToCart('${product.id}')">Add to cart</button>`
-                        }
+                           <button class="btn btn-primary" onclick="addToCart('${product.id}')">Add to cart</button>
                 </div>
                         </div>
                 </div>
@@ -333,7 +342,8 @@ function updateCartDisplay() {
       <tr>
       <td><img src=${product.image} class="image-table" /></td>
       <td>${product.title}</td>
-      <td>$${product.price.toFixed(2)}</td>
+      <td>$${product.price}</td>
+      <td><button class="btn btn-danger btn-sm" onclick="removeFromCart(${product.id})">Remove</button></td>
     </tr>
           `
     )
@@ -346,13 +356,19 @@ function updateCartDisplay() {
         <th>Image</th>
         <th>Title</th>
         <th>Price</th>
+        <th>Price</th>
       </tr>
     </thead>
     <tbody>
       ${cartElements}
     </tbody>
   </table>
-`;
+  <h4>Total price : ${cartItems
+    .reduce((prev, current) => prev + current.price, 0)
+    .toFixed(2)}</h4>
+  `;
 
   cartList.innerHTML = table;
 }
+
+updateCartDisplay();
