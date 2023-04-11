@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #00dbde, #fc00ff, #8c0b8d);
+}
+
+label{
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+}
+
+input{
+    width: 200px;
+}
+
+button{
+    display: block;
+    margin-top: 1rem;
+    width: 100px;
+    background-image: linear-gradient(to right, #00dbde, #fc00ff, #8c0b8d);
+    position: relative;
+    width: 100%;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    overflow: hidden;
+    border: transparent;
+}
+
+.wrapper{
+    background-color: #fff;
+    width: 300px;
+    height: 200px;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
