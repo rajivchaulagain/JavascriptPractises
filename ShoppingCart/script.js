@@ -342,8 +342,7 @@ function updateCartDisplay() {
       <td>${product.title}</td>
       <td>$${product.price}</td>
       <td><button class="btn btn-danger btn-sm" onclick="removeFromCart(${product.id})">Remove</button></td>
-    </tr>
-          `
+    </tr>`
     )
     .join("");
 
