@@ -269,8 +269,6 @@ const products = [
 
 let cartItems = JSON.parse(localStorage.getItem('products')) || [];
 
-console.log({cartItems});
-
 const isItemInCart = (itemId) => {
   for (let i = 0; i < cartItems.length; i++) {
     if (cartItems[i].id === Number(itemId)) {

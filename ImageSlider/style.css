@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-wrapper{
+    overflow-x: hidden;
+}
+
+.image-slider img{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    display: none;
+}
+
+.image-slider img.active{
+    display: block;
+}
+
+.disable{
+    display: none;
+}
