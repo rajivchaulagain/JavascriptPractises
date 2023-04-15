@@ -10,7 +10,7 @@ function userEvent(event){
     const possibleOutcomes = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * possibleOutcomes.length);
     let randomOutcome = possibleOutcomes[randomIndex];
-    selection.innerText = `You selected : ${event} , Computer Selected : ${randomOutcome}`
+    selection.innerHTML = `You selected : <img src="./images/${event}.png"> , Computer Selected : <img src="./images/${randomOutcome}.png">`
     if(event === randomOutcome){
         ties++
         totalResult.innerText = `Ties : ${ties} , You wins : ${useWins} , computer wins : ${computerWins} `

@@ -1,18 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
-</head>
-<body>
-    <button onclick="userEvent('rock')">Rock</button>
-    <button onclick="userEvent('paper')">Paper</button>
-    <button onclick="userEvent('scissors')">Scissors</button>
-    <p id="selection"></p>
-    <p id="result"></p>
-    <p id="total-result"></p>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+        </style>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(108, 108, 251);
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        font-family: 'Roboto', sans-serif;
+      }
+      img {
+        width: 20px;
+      }
+      button {
+        margin: 0 0.25rem;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: .5rem .8rem;
+        border-radius: 55%;
+        cursor: pointer;
+      }
+      .wrapper {
+        display: flex;
+      }
+      h3{
+        margin-bottom: 2rem;
+        border: 1px solid #ccc;
+        padding: .5rem;
+      }
+      .main{
+        padding: 1rem;
+        background-color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: .75rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <h3>Play Rock , Scissor and Paper game</h3>
+        <div class="wrapper">
+          <button onclick="userEvent('rock')">
+            <img src="./images/rock.png" />
+          </button>
+          <button onclick="userEvent('paper')">
+            <img src="./images/paper.png" />
+          </button>
+          <button onclick="userEvent('scissors')">
+            <img src="./images/scissors.png" />
+          </button>
+        </div>
+        <p id="selection"></p>
+        <p id="result"></p>
+        <p id="total-result"></p>
+    </div>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
