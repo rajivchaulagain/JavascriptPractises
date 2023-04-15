@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>USD TO NEP</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .wrapper {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 2rem;
+        margin-top: 2rem;
+      }
+      .flex {
+        margin: 1rem 0;
+      }
+      input {
+        margin: 5px 0;
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc !important;
+      }
+      #converter {
+        background-color: blueviolet;
+        color: #fff;
+        border: none;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        margin-top: 1.25rem;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h3>Convert USD to Nepali converter</h3>
+      <div class="form-group">
+        <div><label for="usd-dollar">Enter USD price :</label></div>
+        <input
+          type="number"
+          id="usd-dollar"
+          name="usd"
+          placeholder="Your price in dollars"
+        />
+      </div>
+      <div class="flex">
+        <button id="reverse" onclick="reverseFnc()">
+          <i class="fas fa-repeat"></i>
+        </button>
+      </div>
+      <div class="form-group">
+        <div><label for="nep-dollar">Enter NEP price :</label></div>
+        <input
+          type="number"
+          id="nep-dollar"
+          name="nep"
+          placeholder="Your price in nepali rupees"
+        />
+      </div>
+      <button id="converter" onclick="converterFnc()">Convert</button>
+      <p id="result" style="font-weight: bold"></p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
