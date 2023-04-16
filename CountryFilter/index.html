@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+        </style>
+    <style>
+      body {
+        overflow-x: hidden;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+      }
+      input{
+        width: 200px;
+        height: 15px;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .child {
+        flex: 1 0 21%; /* explanation below */
+      }
+      p{
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>Countries Names :- </h4>
+    <input placeholder="search country" id="search-value" />
+    <div id="countries-list"></div>
+    <script src="index.js" type="module" defer></script>
+    <script src="data.js" type="module" defer></script>
+  </body>
+</html>
